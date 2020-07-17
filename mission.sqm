@@ -1,0 +1,2699 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=129;
+	class ItemIDProvider
+	{
+		nextID=57;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
+	};
+	class Camera
+	{
+		pos[]={4829.4902,365.65216,10163.634};
+		dir[]={0.15097089,-0.54573357,0.8244071};
+		up[]={0.098324522,0.8379218,0.53690398};
+		aside[]={0.98372781,6.503542e-007,-0.18013869};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"rhsusf_c_troops",
+	"RSPN_Assets",
+	"A3_Modules_F_Curator_Curator",
+	"A3_Modules_F_Intel",
+	"A3_Modules_F",
+	"A3_Ui_F",
+	"rhsusf_vehicles",
+	"A3_Modules_F_Multiplayer",
+	"A3_Supplies_F_Heli_CargoNets"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=7;
+		class Item0
+		{
+			className="rhsusf_c_troops";
+			name="RHSUSF Infantry & Equipment";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item1
+		{
+			className="RSPN_Assets";
+			name="RSPN_Assets";
+		};
+		class Item2
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="rhsusf_vehicles";
+			name="rhsusf_vehicles";
+		};
+		class Item6
+		{
+			className="A3_Supplies_F_Heli";
+			name="Arma 3 Helicopters - Ammoboxes and Supplies";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=12134374;
+class ScenarioData
+{
+	author="strategy isn't tactics";
+	overviewText="НЕ ДЛЯ ИГРЫ!" \n "Эталон для создания миссий стандарта OPIII (OP3_).\n" \n "Основные критерии описаны в комментариях на СЗ." \n "Критерии для доп. механик искать в description.ext. Легенду обозначений ниже - там же." \n "" \n "TYPE: Free/Semi-Free/Linear" \n "MECHS: SPTv";
+	respawn=3;
+	respawnDelay=4;
+	class Header
+	{
+		gameType="Coop";
+		maxPlayers=3;
+	};
+	wreckRemovalMaxTime=3600;
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=5;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Wave";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="MenuPosition";
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="TicketsSpawn";
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Spectator";
+							};
+						};
+						class Item4
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="EndMission";
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="ENH_dynamicSkill";
+			expression="if (!is3DEN && {_value # 0 && {isServer}}) then			{				_value params				[					'_enable',					'_skillMinBLUFOR',					'_skillAimMinBLUFOR',					'_skillMaxBLUFOR',					'_skillAimMaxBlUFOR',					'_skillMinOPFOR',					'_skillAimMinOPFOR',					'_skillMaxOPFOR',					'_skillAimMaxOPFOR',					'_skillMinINDFOR',					'_skillAimMinINDFOR',					'_skillMaxINDFOR',					'_skillAimMaxINDFOR'				];				[					true,					[						[WEST,_skillMinBLUFOR,_skillAimMinBLUFOR,_skillMaxBLUFOR,_skillAimMaxBlUFOR],						[EAST,_skillMinOPFOR,_skillAimMinOPFOR,_skillMaxOPFOR,_skillAimMaxOPFOR],						[INDEPENDENT,_skillMinINDFOR,_skillAimMinINDFOR,_skillMaxINDFOR,_skillAimMaxINDFOR]					]				] call BIS_fnc_EXP_camp_dynamicAISkill;			}";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=13;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"BOOL"
+									};
+								};
+								value=0;
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.80000001;
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.30000001;
+							};
+						};
+						class Item4
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+						class Item5
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+						class Item6
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.80000001;
+							};
+						};
+						class Item7
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.30000001;
+							};
+						};
+						class Item8
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+						class Item9
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+						class Item10
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.80000001;
+							};
+						};
+						class Item11
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.30000001;
+							};
+						};
+						class Item12
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0.5;
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute2
+		{
+			property="ReviveMode";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute3
+		{
+			property="ReviveUnconsciousStateMode";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute4
+		{
+			property="ENH_respawnTickets_independent";
+			expression="if (!is3DEN && {isMultiplayer && {isServer}}) then {[independent,_value] call BIS_fnc_respawnTickets}";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute5
+		{
+			property="ReviveRequiredItems";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=2;
+				};
+			};
+		};
+		class Attribute6
+		{
+			property="ENH_respawnTickets_east";
+			expression="if (!is3DEN && {isMultiplayer && {isServer}}) then {[east,_value] call BIS_fnc_respawnTickets}";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute7
+		{
+			property="ENH_respawnTickets_civilian";
+			expression="if (!is3DEN && {isMultiplayer && {isServer}}) then {[civilian,_value] call BIS_fnc_respawnTickets}";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute8
+		{
+			property="ENH_respawnTickets_west";
+			expression="if (!is3DEN && {isMultiplayer && {isServer}}) then {[west,_value] call BIS_fnc_respawnTickets}";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=6;
+				};
+			};
+		};
+		nAttributes=9;
+	};
+	class Category1
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="EnableTargetDebug";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute2
+		{
+			property="ENH_dynamicGroups";
+			expression="		if (!is3DEN && {isServer && {_value && {!(allCurators isEqualTo [])}}}) then		{			[] spawn			{				while {true} do				{					{						 _x addCuratorEditableObjects						 [						 	entities [[],['Logic'],true],						  	true						 ];					} count allCurators;					sleep 60;				};			};		}";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		nAttributes=3;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		briefingName="[OPIII] Эталонная миссия";
+		resistanceWest=0;
+		timeOfChanges=1800.0002;
+		startWeather=0.25;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.25;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2008;
+		month=10;
+		day=11;
+		hour=9;
+		minute=20;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=34;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=5;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4860.1494,338.99142,10145.18};
+						angles[]={0,4.0183353,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=1;
+					type="rhsusf_usmc_marpat_wd_officer";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4861.4375,338.99142,10144.7};
+						angles[]={0,3.9065857,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=2;
+					type="rhsusf_usmc_marpat_wd_rifleman_m4";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4862.6274,338.99142,10144.077};
+						angles[]={0,3.9065857,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+					};
+					id=4;
+					type="rhsusf_usmc_marpat_wd_rifleman_m4";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4859.4351,338.99219,10147.015};
+						angles[]={0,3.6229558,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=7;
+					type="rhsusf_usmc_marpat_wd_rifleman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4858.2646,338.99374,10148.553};
+						angles[]={0,3.6229558,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						isPlayable=1;
+					};
+					id=9;
+					type="rhsusf_usmc_marpat_wd_rifleman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.02;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="PLG";
+			};
+			id=0;
+		};
+		class Item1
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4867.854,338.98999,10141.102};
+				angles[]={0,0,0.0012918708};
+			};
+			title="OPIII Main";
+			description="- description.ext обязан присутствовать. ЧЕКАЙ ЕГО, ТАМ ВАЖНО!" \n "- Переменная группы игроков - всегда ""PLG"" Если несколько - ""PLG_#"", # - от нуля." \n "- Создай модуль зевса (owner - #adminLogged)" \n "- Задачи создаются посредством переменных OPV_tsks (исключение - стартовые). Выполняются посредством OPV_tsk. Синтаксис в комменте ниже (Префиксы и переменные). Изменение переменной OPV_tsk может повлечь за собой изменение OPV_tsks, но не наоборот. Пример ниже ВПП." \n "- Список переменных (в том числе и OPV_tsk) обозначаешь в ""both/fn_init_pre.sqf"". НЕ ЗАБУТЬ ПРОДЕКЛАРИРОВАТЬ ТАМ ВСЕ OPV_tsk#(_#) и OPV_tsks#(_#)" \n "- Создаешь маркеры на карте с префиксами OPM_D для дебага. Обязательные - переменные задач с описанием." \n "" \n "- ВСЕ триггеры КРАЙНЕ РЕКОМЕНДУЕТСЯ называть во избежание путаницы." \n "- Задержки в триггерах tsks и tsk тоже КРАЙНЕ РЕКОМЕНДОВАНЫ";
+			id=10;
+			atlOffset=-0.00045776367;
+		};
+		class Item2
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4853.6758,339,10132.123};
+			};
+			title="OPIII Main - ATTRIBUTES";
+			description="- Общ - Состояние - Консоль - Для админа" \n "- Общ - Прочее - Зевс - вкл" \n "- МП - Тип (настроить)" \n "- МП - Оживление (настроить)";
+			id=11;
+		};
+		class Item3
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4861.0713,339,10117.819};
+			};
+			id=12;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="#adminLogged";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item4
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4839.853,339,10122.867};
+			};
+			title="Префиксы и переменные";
+			description="OPV - переменная операции (миссии) [ OPV_getin ]" \n "MPV - переменная механики [ MPV_sectors ]" \n "  MPVC - для клиента [ MPVC_loser, MPVC_winner ]" \n "OPL - логика (позиция на карте) операции [ OPL_artpoint ]" \n "OPT/MPT - Триггер [ OPT_tsk3, MPT_sect_1 ]" \n "OPM/MPM - Маркер [ OPM_exit, MPM_sect_1, OPM_D_tsk1 ]" \n "" \n "G_(B/O/I) префикс для группы (B=Blufor, O=Opfor, I=Independent/Guer) [ G_B_ebalnik, G_O_aa2 ]" \n "" \n "Техника не обязана иметь префикс. Если хочется - используй OPV" \n "" \n "OPV_tsk#, OPV_tsk#_# - Выполнение задач и подзадач [ OPV_tsk2, OPV_tsk3_1 ]" \n "OPV_tsks#, OPV_tsks#_# - Создать задачу/подзадачу" \n "OPV_tsk - корневая задача." \n "Сами идентификаторы задач (модуль ""Создать задание"") такие же, как и в первой строке, но без префикса (tsk1, tsk2, tsk3_1, tsk3_2...)";
+			id=13;
+		};
+		class Item5
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4786.4639,339,10119.966};
+			};
+			id=16;
+			type="ModuleTaskCreate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskCreate_F_Destination";
+					expression="_this setVariable ['Destination',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskCreate_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Default";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleTaskCreate_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleTaskCreate_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleTaskCreate_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="TSK1";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ModuleTaskCreate_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ModuleTaskCreate_F_ID";
+					expression="_this setVariable ['ID',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="tsk1";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ModuleTaskCreate_F_AlwaysVisible";
+					expression="_this setVariable ['AlwaysVisible',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ModuleTaskCreate_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ModuleTaskCreate_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CREATED";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ModuleTaskCreate_F_IDParent";
+					expression="_this setVariable ['IDParent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=11;
+			};
+		};
+		class Item6
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4778.7148,339,10115.093};
+			};
+			id=18;
+			type="ModuleTaskCreate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskCreate_F_Destination";
+					expression="_this setVariable ['Destination',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskCreate_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Default";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleTaskCreate_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleTaskCreate_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleTaskCreate_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="TSK1_1";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ModuleTaskCreate_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ModuleTaskCreate_F_ID";
+					expression="_this setVariable ['ID',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="tsk1_1";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ModuleTaskCreate_F_AlwaysVisible";
+					expression="_this setVariable ['AlwaysVisible',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ModuleTaskCreate_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ModuleTaskCreate_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="ASSIGNED";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ModuleTaskCreate_F_IDParent";
+					expression="_this setVariable ['IDParent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="tsk1";
+						};
+					};
+				};
+				nAttributes=11;
+			};
+		};
+		class Item7
+		{
+			dataType="Trigger";
+			position[]={4811.437,339,10117.629};
+			class Attributes
+			{
+				name="OPT_tsk1";
+				condition="call{OPV_tsk1_1 && OPV_tsk1_2}";
+				onActivation="call{OPV_tsks2 = true}";
+				sizeA=0;
+				sizeB=0;
+				timeout[]={1,1,1};
+			};
+			id=19;
+			type="EmptyDetector";
+		};
+		class Item8
+		{
+			dataType="Trigger";
+			position[]={4816.7998,339,10108.112};
+			class Attributes
+			{
+				name="OPT_tsk1_1";
+				condition="call{OPV_tsk1_1}";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=20;
+			type="EmptyDetector";
+		};
+		class Item9
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4796.2808,339,10111.196};
+			};
+			id=21;
+			type="ModuleTaskSetState_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SUCCEEDED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item10
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4794.3652,339,10099.329};
+			};
+			id=22;
+			type="ModuleTaskSetState_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SUCCEEDED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item11
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4815.3071,339,10119.865};
+			};
+			title="Задачи-2";
+			description="В корневых задачах ставь задержку, если они выполняются вместе со своей подзадачей";
+			id=23;
+		};
+		class Item12
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4773.1938,339,10111.06};
+			};
+			id=26;
+			type="ModuleTaskCreate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskCreate_F_Destination";
+					expression="_this setVariable ['Destination',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskCreate_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Default";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleTaskCreate_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleTaskCreate_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleTaskCreate_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="TSK1_2";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ModuleTaskCreate_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ModuleTaskCreate_F_ID";
+					expression="_this setVariable ['ID',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="tsk1_2";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ModuleTaskCreate_F_AlwaysVisible";
+					expression="_this setVariable ['AlwaysVisible',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ModuleTaskCreate_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ModuleTaskCreate_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CREATED";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ModuleTaskCreate_F_IDParent";
+					expression="_this setVariable ['IDParent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="tsk1";
+						};
+					};
+				};
+				nAttributes=11;
+			};
+		};
+		class Item13
+		{
+			dataType="Trigger";
+			position[]={4817.1992,339,10096.202};
+			class Attributes
+			{
+				name="OPT_tsk1_2";
+				condition="call{OPV_tsk1_2}";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=27;
+			type="EmptyDetector";
+		};
+		class Item14
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4794.7646,339,10087.419};
+			};
+			id=28;
+			type="ModuleTaskSetState_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SUCCEEDED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item15
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4744.376,339,10117.893};
+			};
+			title="Задачи-3";
+			description="Задержка в триггере для tsks# должна быть 2сек." \n "";
+			id=30;
+		};
+		class Item16
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4757.395,339,10099.982};
+			};
+			id=31;
+			type="ModuleTaskCreate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskCreate_F_Destination";
+					expression="_this setVariable ['Destination',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskCreate_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="box";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleTaskCreate_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleTaskCreate_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleTaskCreate_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="TSK2";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ModuleTaskCreate_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ModuleTaskCreate_F_ID";
+					expression="_this setVariable ['ID',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="tsk2";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ModuleTaskCreate_F_AlwaysVisible";
+					expression="_this setVariable ['AlwaysVisible',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ModuleTaskCreate_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ModuleTaskCreate_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="ASSIGNED";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ModuleTaskCreate_F_IDParent";
+					expression="_this setVariable ['IDParent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=11;
+			};
+		};
+		class Item17
+		{
+			dataType="Trigger";
+			position[]={4751.0078,339,10110.223};
+			class Attributes
+			{
+				name="OPT_tsks2";
+				condition="call{OPV_tsks2}";
+				sizeA=0;
+				sizeB=0;
+				timeout[]={2,2,2};
+			};
+			id=33;
+			type="EmptyDetector";
+		};
+		class Item18
+		{
+			dataType="Trigger";
+			position[]={4790.311,339,10065.878};
+			class Attributes
+			{
+				name="OPT_tsk2";
+				condition="call{OPV_tsk2}";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=35;
+			type="EmptyDetector";
+		};
+		class Item19
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4770.9268,339,10079.837};
+			};
+			id=36;
+			type="ModuleTaskSetState_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SUCCEEDED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item20
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4831.6499,339.08075,10208.222};
+			};
+			name="OPL_spawn";
+			id=40;
+			type="Logic";
+		};
+		class Item21
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4773.2378,339,10131.052};
+			};
+			title="Задачи-1";
+			description="Начальные задачи создаются без триггеров.";
+			id=24;
+		};
+		class Item22
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4888.7788,338.98999,10104.396};
+			};
+			title="Module: T (Respawn w\ tickets)";
+			description="Включение: В description.ext - функции." \n "- Атрибуты - МП - Возрождение:" \n "  - Возрождение на заданной позиции" \n "  - Наборы правил - Выбрать позицию - ВКЛ" \n "" \n "- Настрой секцию ""Возрождение""." \n "- Можешь ставить как модули ""МП - Точка возрождения"", так и логику  ""OPL_respawn"" если тривиальна точная позиция. ЛОГИКА ДОЛЖНА ПРИСУТСВОВАТЬ, Т.К. НА НЕЙ СПАВНЯТСЯ БОТЫ ПО УМОЛЧАНИЮ" \n "- Для включения/выключения точки используй BIS_fnc_addRespawnPosition, предварительно покурив энтри на community.bistudio.com." \n "- Боты респавнятся только если они играбельные, и всегда, если они таковые." \n "- Боты так же тратят тикеты, но спокойно появляются если они закончились." \n "- Если включена механика контроля секторов, то в них можно добавлять позиции респавна." \n "" \n "ПОДМОДУЛЬ v:" \n "- Реализовывать с помощью стандартного модуля ( МП - возрождение техники )";
+			id=44;
+		};
+		class Item23
+		{
+			dataType="Trigger";
+			position[]={4846.8491,339,9895.6309};
+			class Attributes
+			{
+				name="MPT_sect1_1";
+				text="Test sector";
+				condition="call{this}";
+				sizeA=94.436996;
+				sizeB=59.278999;
+				activationBy="LOGIC";
+			};
+			id=46;
+			type="EmptyDetector";
+		};
+		class Item24
+		{
+			dataType="Trigger";
+			position[]={4942.103,339,9788.1123};
+			angle=-2.2873411;
+			class Attributes
+			{
+				name="MPT_sect1_2";
+				text="Test sector";
+				condition="call{this}";
+				sizeA=94.436996;
+				sizeB=59.278999;
+			};
+			id=47;
+			type="EmptyDetector";
+		};
+		class Item25
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4807.6958,339,9886.9395};
+			};
+			name="OPL_s1";
+			init="call{this setVariable [""zname"", ""Spawn 228""];" \n "this setVariable [""zrs"", true];}";
+			id=48;
+			type="Logic";
+		};
+		class Item26
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4871.1929,339,10097.866};
+			};
+			title="Module: S - Sector Control";
+			description="Включение: В description.ext - функции." \n "- Расставить триггеры с названием ""OPT_sect#"" и ""OPT_sect#_#"", счет с единицы." \n "- Название второго типа означает, что эти триггеры относятся к одному сектору [ OPT_sect2_1, OPT_sect2_2 оба относятся к одному сектору. ]" \n "- При желании в поле текста триггера можно добавить название сектора. В многообластных секторах берется значение первого триггера." \n "- Доступны переменные с именами OPV_SC_%1, где %1 - имя (переменной) любого из триггеров секторов, их значение - сторона, контролирующая сектор." \n "- Активация триггеров может быть любая, она будет потом перенастроена, но если задать сторону активации - это будет сторона, контролирующая сектор по умолчанию" \n "" \n "- Доступна интеграция с модулем T (Respawn w\ tickets), т.е. при захвате сектора в нем появится респаун. Для этого содаешь логику игры внутри области триггера. Название не тривиально, но следует придерживаться стиля (префикс OPL). В инициализации логики добавь строку ""this setVariable ['zrs', true];"". Название точки респауна создается автоматически, но его можно и изменить путем добавления строки ""this setVariable [""zname"", ""Kimi no na""]""";
+			id=49;
+		};
+		class Item27
+		{
+			dataType="Marker";
+			position[]={347.38708,27.352325,483.32391};
+			name="OPM_D_1";
+			text="OPV_tsk1_1: Убить китайца";
+			type="mil_marker";
+			colorName="ColorBrown";
+			id=50;
+			atlOffset=72.248016;
+		};
+		class Item28
+		{
+			dataType="Marker";
+			position[]={348.30896,1.0628929,434.61005};
+			name="OPM_D_2";
+			text="OPV_tsk1_2: Найти флешку с ЦП";
+			type="mil_marker";
+			colorName="ColorBrown";
+			id=51;
+			atlOffset=51.349216;
+		};
+		class Item29
+		{
+			dataType="Marker";
+			position[]={348.37488,0,382.21259};
+			name="OPM_D_3";
+			text="OPV_tsk2: Спрятать труп";
+			type="mil_marker";
+			colorName="ColorBrown";
+			id=52;
+			atlOffset=51.349213;
+		};
+		class Item30
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4821.4253,341.21478,10192.573};
+				angles[]={0,4.1939216,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="hmmv";
+			};
+			id=53;
+			type="rhsusf_m1025_w_s_m2";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_decalMask";
+					expression="if(_value != 'NoChange')then{ [_this,'unitdecals_1',_value] call rhs_fnc_hmmwv_setDecal}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_decalDoors";
+					expression="if(_value != 'NoChange')then{ [_this,'unitdecals_2',_value] call rhs_fnc_hmmwv_setDecal}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NoChange";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item31
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={4797.1182,339,10173.419};
+			};
+			id=54;
+			type="ModuleRespawnVehicle_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleRespawnVehicle_F_ForcedRespawn";
+					expression="_this setVariable ['ForcedRespawn',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleRespawnVehicle_F_Init";
+					expression="_this setVariable ['Init',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleRespawnVehicle_F_RespawnWhenDisabled";
+					expression="_this setVariable ['RespawnWhenDisabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleRespawnVehicle_F_DesertedDistance";
+					expression="_this setVariable ['DesertedDistance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleRespawnVehicle_F_PositionType";
+					expression="_this setVariable ['PositionType',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ModuleRespawnVehicle_F_RespawnCount";
+					expression="_this setVariable ['RespawnCount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="2";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ModuleRespawnVehicle_F_Position";
+					expression="_this setVariable ['Position',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ModuleRespawnVehicle_F_Wreck";
+					expression="_this setVariable ['Wreck',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="2";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ModuleRespawnVehicle_F_Delay";
+					expression="_this setVariable ['Delay',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="2";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ModuleRespawnVehicle_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="1";
+						};
+					};
+				};
+				nAttributes=10;
+			};
+		};
+		class Item32
+		{
+			dataType="Trigger";
+			position[]={4804.7842,339,10168.085};
+			class Attributes
+			{
+				name="OPT_outOfHmmv";
+				text="Триггерится когда хэмви больше нет";
+				condition="call{!alive hmmv && isNil {hmmv getVariable ""bis_fnc_modulerespawnvehicle_mpkilled""}}";
+				onActivation="call{[""looser1"", false] call BIS_fnc_endMission}";
+				sizeA=0;
+				sizeB=0;
+				effectSoundTrigger="AlarmSfx";
+			};
+			id=55;
+			type="EmptyDetector";
+		};
+		class Item33
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4822.3198,339.82532,10203.546};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=56;
+			type="B_CargoNet_01_ammo_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ENH_virtualArsenal";
+					expression="if (!is3DEN && {_value}) then {['AmmoboxInit',[_this,true]] spawn BIS_fnc_arsenal}";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""CUP_arifle_G3A3_ris"",""CUP_arifle_G3A3_ris_vfg"",""CUP_arifle_G3A3_modern_ris"",""CUP_arifle_G3A3_ris_black"",""CUP_arifle_G3A3_ris_vfg_black"",""CUP_arifle_G3A3_modern_ris_black"",""CUP_srifle_M14_DMR"",""CUP_srifle_M14_DMR_LeupoldMk4"",""CUP_srifle_M14_DMR_LeupoldMk4_snds"",""CUP_srifle_M24_wdl"",""CUP_srifle_M24_ghillie"",""CUP_srifle_M24_blk"",""CUP_srifle_M40A3"",""CUP_srifle_M24_wdl_LeupoldMk4LRT"",""CUP_srifle_M24_blk_LeupoldMk4LRT"",""CUP_srifle_M24_ghillie_bipod"",""CUP_srifle_M40A3_bipod"",""rhs_weap_XM2010"",""rhs_weap_XM2010_d"",""rhs_weap_XM2010_wd"",""rhs_weap_XM2010_sa"",""rhs_weap_m24sws"",""rhs_weap_m40a5"",""rhs_weap_m40a5_d"",""rhs_weap_m40a5_wd"",""rhs_weap_m4"",""rhs_weap_m4_mstock"",""rhs_weap_m4_carryhandle"",""rhs_weap_m4_carryhandle_mstock"",""rhs_weap_m4_grip"",""rhs_weap_m4_grip2"",""rhs_weap_m4_grip3"",""rhs_weap_m4_mstock_grip"",""rhs_weap_m4_mstock_grip2"",""rhs_weap_m4_mstock_grip3"",""rhs_weap_m4_carryhandle_grip"",""rhs_weap_m4_carryhandle_grip2"",""rhs_weap_m4_carryhandle_grip3"",""rhs_weap_m4_carryhandle_mstock_grip"",""rhs_weap_m4_carryhandle_mstock_grip2"",""rhs_weap_m4_carryhandle_mstock_grip3"",""rhs_weap_m4_m320"",""rhs_weap_m4_m203"",""rhs_weap_m4_m203S"",""rhs_weap_m4_carryhandle_m203"",""rhs_weap_m4_carryhandle_m203S"",""rhs_weap_m4a1"",""rhs_weap_m4a1_mstock"",""rhs_weap_m4a1_carryhandle"",""rhs_weap_m4a1_grip"",""rhs_weap_m4a1_grip2"",""rhs_weap_m4a1_grip3"",""rhs_weap_m4a1_mstock_grip"",""rhs_weap_m4a1_mstock_grip2"",""rhs_weap_m4a1_mstock_grip3"",""rhs_weap_m4a1_carryhandle_grip"",""rhs_weap_m4a1_carryhandle_grip2"",""rhs_weap_m4a1_carryhandle_grip3"",""rhs_weap_m4a1_m203"",""rhs_weap_m4a1_m203s"",""rhs_weap_m4a1_m203s_wd"",""rhs_weap_m4a1_m203s_d"",""rhs_weap_m4a1_carryhandle_m203"",""rhs_weap_m4a1_carryhandle_m203S"",""rhs_weap_m4a1_m320"",""rhs_weap_m4a1_blockII"",""rhs_weap_m4a1_blockII_bk"",""rhs_weap_m4a1_blockII_KAC"",""rhs_weap_m4a1_blockII_KAC_bk"",""rhs_weap_m4a1_blockII_grip"",""rhs_weap_m4a1_blockII_grip2"",""rhs_weap_m4a1_blockII_grip_bk"",""rhs_weap_m4a1_blockII_grip2_bk"",""rhs_weap_m4a1_blockII_grip2_wd"",""rhs_weap_m4a1_blockII_grip2_d"",""rhs_weap_m4a1_blockII_grip_KAC"",""rhs_weap_m4a1_blockII_grip2_KAC"",""rhs_weap_m4a1_blockII_grip_KAC_bk"",""rhs_weap_m4a1_blockII_grip2_KAC_bk"",""rhs_weap_m4a1_blockII_grip2_KAC_wd"",""rhs_weap_m4a1_blockII_grip2_KAC_d"",""rhs_weap_m4a1_blockII_M203"",""rhs_weap_m4a1_blockII_M203_bk"",""rhs_weap_mk18"",""rhs_weap_mk18_KAC"",""rhs_weap_mk18_grip"",""rhs_weap_mk18_grip2"",""rhs_weap_mk18_grip_bk"",""rhs_weap_mk18_grip2_bk"",""rhs_weap_mk18_grip_wd"",""rhs_weap_mk18_grip2_wd"",""rhs_weap_mk18_grip_d"",""rhs_weap_mk18_grip2_d"",""rhs_weap_mk18_grip_KAC"",""rhs_weap_mk18_grip2_KAC"",""rhs_weap_mk18_grip_KAC_bk"",""rhs_weap_mk18_grip2_KAC_bk"",""rhs_weap_mk18_grip_KAC_wd"",""rhs_weap_mk18_grip2_KAC_wd"",""rhs_weap_mk18_grip_KAC_d"",""rhs_weap_mk18_grip2_KAC_d"",""rhs_weap_m16a4"",""rhs_weap_m16a4_imod"",""rhs_weap_m16a4_carryhandle"",""rhs_weap_m16a4_grip"",""rhs_weap_m16a4_grip2"",""rhs_weap_m16a4_grip3"",""rhs_weap_m16a4_imod_grip"",""rhs_weap_m16a4_imod_grip2"",""rhs_weap_m16a4_imod_grip3"",""rhs_weap_m16a4_carryhandle_grip"",""rhs_weap_m16a4_carryhandle_grip2"",""rhs_weap_m16a4_carryhandle_grip3"",""rhs_weap_m16a4_carryhandle_M203"",""rhs_weap_m16a4_imod_M203"",""rhs_weap_hk416d10"",""rhs_weap_hk416d10_grip"",""rhs_weap_hk416d10_grip2"",""rhs_weap_hk416d10_grip3"",""rhs_weap_hk416d145"",""rhs_weap_hk416d145_grip"",""rhs_weap_hk416d145_grip2"",""rhs_weap_hk416d145_grip3"",""rhs_weap_hk416d10_LMT"",""rhs_weap_hk416d10_LMT_grip"",""rhs_weap_hk416d10_LMT_grip2"",""rhs_weap_hk416d10_LMT_grip3"",""rhs_weap_hk416d10_m320"",""rhs_weap_hk416d145_m320"",""rhs_weap_m27iar"",""rhs_weap_m27iar_grip"",""rhs_weap_m27iar_grip1"",""rhs_weap_m27iar_grip2"",""rhs_weap_m27iar_grip3"",""rhs_weap_m32"",""rhs_weap_mk17_CQC"",""rhs_weap_mk17_CQC_grip"",""rhs_weap_mk17_CQC_grip2"",""rhs_weap_mk17_CQC_grip3"",""rhs_weap_mk17_STD"",""rhs_weap_mk17_STD_grip"",""rhs_weap_mk17_STD_grip2"",""rhs_weap_mk17_STD_grip3"",""rhs_weap_mk17_LB"",""rhs_weap_mk17_LB_grip"",""rhs_weap_mk17_LB_grip2"",""rhs_weap_mk17_LB_grip3"",""rhs_weap_m4_bipod"",""rhs_weap_m4a1_bipod"",""rhs_weap_m4a1_carryhandle_bipod"",""rhs_weap_m16a4_bipod"",""rhs_weap_m16a4_carryhandle_bipod"",""rhs_m4_compm4"",""rhs_m4_acog"",""rhs_m4_grip_compm4"",""rhs_m4_m203_compm4"",""rhs_m4a1_compm4"",""rhs_m4a1_grip_compm4"",""rhs_m4a1_acog"",""rhs_m4a1_acog2"",""rhs_m4a1_acog3"",""rhs_m4a1_grip_acog"",""rhs_m4a1_grip_acog2"",""rhs_m4a1_m203s_ACOG"",""rhs_weap_m16a4_grip_acog"",""rhs_weap_XM2010_d_leu"",""rhs_weap_XM2010_wd_leu"",""rhs_weap_m24sws_leu"",""rhs_weap_m16a4_acog_usmc"",""rhs_weap_m16a4_m203_acog_usmc"",""rhs_weap_m16a4_grip_acog_usmc"",""rhs_weap_m16a4_grip_acog2_usmc"",""rhs_m4_acog_usmc"",""rhs_m4_acog2_usmc"",""rhs_m4_grip_acog_usmc"",""rhs_m4_grip_acog3_usmc"",""rhs_m4_m203_acog_usmc"",""rhs_m4_m203s_acog_usmc"",""rhs_m4a1_eotech"",""rhs_m4a1_acog_usmc"",""rhs_m4a1_acog2_usmc"",""rhs_m4a1_acog3_usmc"",""rhs_m4a1_acog2_usmc_sup"",""rhs_m4a1_grip_eotech"",""rhs_m4a1_grip_acog_usmc"",""rhs_m4a1_grip_acog2_usmc_sup"",""rhs_m4a1_grip_acog2_usmc_sup_tan"",""rhs_m4a1_grip_acog3_usmc_sup"",""rhs_m4a1_m203_acog3_usmc_sup"",""rhs_weap_m27iar_bipod_acog_usmc"",""rhs_weap_m27iar_bipod_acog_usmc_sup"",""rhs_weap_m27iar_bipod_acog_usmc_sup_tan"",""rhs_weap_m40_wd_usmc"",""rhs_weap_m40_d_usmc"",""rhs_weap_m32_usmc"",""rhs_m4a1_grip_eotech_soc"",""rhs_weap_mk18_eotech"",""rhs_weap_mk18_eotech_sup"",""rhs_weap_mk18_SU230"",""rhs_weap_m4a1_blockII_KAC_SU230"",""rhs_weap_m4a1_blockII_M203_SU230"",""rhs_weap_m4a1_blockII_KAC_SU230_sup"",""rhs_weap_mk17_CQC_SU230A_marsoc"",""rhs_weap_mk17_CQC_SU230A_sup_marsoc"",""rhs_weap_mk17_CQC_G33_sup_marsoc"",""rhs_weap_mk17_LB_DMR_marsoc"",""CUP_arifle_ACR_snw_556"",""CUP_arifle_ACRC_snw_556"",""CUP_arifle_ACR_DMR_snw_556"",""CUP_arifle_ACR_EGLM_snw_556"",""CUP_arifle_ACRC_EGLM_snw_556"",""CUP_arifle_ACR_snw_68"",""CUP_arifle_ACRC_snw_68"",""CUP_arifle_ACR_DMR_snw_68"",""CUP_arifle_ACR_EGLM_snw_68"",""CUP_arifle_ACRC_EGLM_snw_68"",""CUP_arifle_Galil_black"",""CUP_arifle_Galil_556_black"",""CUP_arifle_Galil_SAR_black"",""CUP_glaunch_M32"",""CUP_Famas_F1_Arid"",""CUP_Famas_F1_Rail_Arid"",""CUP_arifle_FNFAL5060"",""CUP_arifle_FNFAL5060_railed"",""CUP_arifle_FNFAL5061_wooden"",""CUP_arifle_FNFAL5061_wooden_railed"",""CUP_arifle_FNFAL_OSW"",""CUP_arifle_FNFAL_OSW_railed"",""CUP_arifle_G36A"",""CUP_arifle_G36A_RIS"",""CUP_arifle_G36A_RIS_camo"",""CUP_arifle_G36A_RIS_wdl"",""CUP_arifle_AG36"",""CUP_arifle_G36A_AG36_RIS"",""CUP_arifle_G36K"",""CUP_arifle_G36K_VFG"",""CUP_arifle_G36K_RIS"",""CUP_arifle_G36K_RIS_hex"",""CUP_arifle_G36K_AG36"",""CUP_arifle_G36K_RIS_AG36"",""CUP_arifle_G36K_RIS_AG36_hex"",""CUP_arifle_G36K_KSK"",""CUP_arifle_G36K_KSK_hex"",""CUP_arifle_G36K_KSK_VFG_hex"",""CUP_arifle_G36C"",""CUP_arifle_G36C_hex"",""CUP_arifle_G36C_VFG"",""CUP_arifle_G36C_VFG_camo"",""CUP_arifle_G36C_VFG_wdl"",""CUP_arifle_G36C_VFG_hex"",""CUP_arifle_G36C_VFG_Carry"",""CUP_arifle_G36C_holo_snds"",""CUP_arifle_G36C_VFG_holo"",""CUP_arifle_G36K_KSK_hex_G33_snds_las"",""CUP_arifle_G36K_KSK_hex_ZO_las"",""CUP_arifle_HK416_CQB_Black"",""CUP_arifle_HK416_Black"",""CUP_arifle_HK_M27"",""CUP_arifle_HK_M27_VFG"",""CUP_arifle_HK416_M203_Black"",""CUP_arifle_HK416_CQB_M203_Black"",""CUP_arifle_HK416_AGL_Black"",""CUP_arifle_HK416_CQB_AG36"",""CUP_arifle_HK_M27_AG36"",""CUP_arifle_HK417_20"",""CUP_arifle_HK417_12"",""CUP_arifle_HK417_12_M203"",""CUP_arifle_HK417_12_AG36"",""CUP_arifle_HK417_20_Laser_Scope_Silenced"",""CUP_arifle_HK417_20_Scope"",""CUP_arifle_HK417_20_Laser_Scope"",""CUP_arifle_M27_ACOG"",""CUP_arifle_HK416_CQB_Wood_G33_snds_las"",""CUP_arifle_HK416_CQB_AG36_Wood_G33_snds_las"",""CUP_srifle_L129A1"",""CUP_srifle_L129A1_HG"",""CUP_arifle_L85A2"",""CUP_arifle_L85A2_G"",""CUP_arifle_L85A2_NG"",""CUP_arifle_L85A2_GL"",""CUP_arifle_L86A2"",""CUP_arifle_L85A2_Holo_laser"",""CUP_arifle_L85A2_HoloGrey_laser"",""CUP_arifle_L85A2_GL_Holo_Laser"",""CUP_arifle_L85A2_SUSAT_Laser"",""CUP_arifle_L85A2_GL_SUSAT_Laser"",""CUP_arifle_L85A2_CWS_Laser"",""CUP_arifle_L85A2_ACOG_Laser"",""CUP_arifle_L85A2_GL_ACOG_Laser"",""CUP_arifle_L86A2_ACOG"",""CUP_arifle_L85A2_Elcan_Laser"",""CUP_arifle_L85A2_GL_Elcan_Laser"",""CUP_sgun_M1014"",""CUP_sgun_M1014_solidstock"",""CUP_sgun_M1014_vfg"",""CUP_sgun_M1014_Entry"",""CUP_sgun_M1014_Entry_vfg"",""CUP_srifle_M110_black"",""CUP_srifle_m110_kac_black"",""CUP_srifle_M110_ANPAS13c2"",""CUP_srifle_M110_ANPVS10"",""CUP_srifle_M14"",""CUP_srifle_M14_CCO"",""CUP_arifle_M16A2"",""CUP_arifle_M16A2_GL"",""CUP_arifle_M16A4_Base"",""CUP_arifle_M16A4_Grip"",""CUP_arifle_M16A4_GL"",""CUP_arifle_Colt727"",""CUP_arifle_Colt727_M203"",""CUP_arifle_M4A1_GL_carryhandle"",""CUP_arifle_M4A1_GL_carryhandle_camo"",""CUP_arifle_M4A1_BUIS_GL"",""CUP_arifle_mk18_black"",""CUP_arifle_SBR_black"",""CUP_arifle_SBR_od"",""CUP_arifle_M16A4_Aim_Laser"",""CUP_arifle_M16A4_ACOG_Laser"",""CUP_arifle_M16A4_GL_Laser"",""CUP_arifle_M16A4_GL_ACOG_Laser"",""CUP_arifle_M4A1_GL_Holo_Flashlight"",""CUP_arifle_M4A1_GL_ACOG_Flashlight"",""CUP_arifle_M4A1_camo_GL_Holo_Flashlight"",""CUP_arifle_M4A1_camo_GL_Holo_Flashlight_Snds"",""CUP_arifle_M4A1_M203_Holo_Laser"",""CUP_arifle_M4A1_M203_CCO_Laser"",""CUP_arifle_M4A1_M203_ACOG_Laser"",""CUP_arifle_M4A1_M203_ANPAS13c1_Laser"",""CUP_arifle_Mk16_STD"",""CUP_arifle_Mk16_STD_FG"",""CUP_arifle_Mk16_STD_AFG"",""CUP_arifle_Mk16_STD_SFG"",""CUP_arifle_Mk16_STD_EGLM"",""CUP_arifle_Mk16_SV"",""CUP_arifle_Mk16_CQC"",""CUP_arifle_Mk16_CQC_FG"",""CUP_arifle_Mk16_CQC_AFG"",""CUP_arifle_Mk16_CQC_EGLM"",""CUP_arifle_Mk16_CQC_black"",""CUP_arifle_Mk16_CQC_FG_black"",""CUP_arifle_Mk16_CQC_AFG_black"",""CUP_arifle_Mk16_CQC_SFG_black"",""CUP_arifle_Mk16_CQC_EGLM_black"",""CUP_arifle_Mk16_STD_black"",""CUP_arifle_Mk16_STD_FG_black"",""CUP_arifle_Mk16_STD_AFG_black"",""CUP_arifle_Mk16_STD_SFG_black"",""CUP_arifle_Mk16_STD_EGLM_black"",""CUP_arifle_Mk16_SV_black"",""CUP_arifle_Mk17_CQC"",""CUP_arifle_Mk17_CQC_FG"",""CUP_arifle_Mk17_CQC_SFG"",""CUP_arifle_Mk17_CQC_EGLM"",""CUP_arifle_Mk17_STD"",""CUP_arifle_Mk17_STD_FG"",""CUP_arifle_Mk17_STD_SFG"",""CUP_arifle_Mk17_STD_EGLM"",""CUP_arifle_Mk20"",""CUP_arifle_Mk17_CQC_Black"",""CUP_arifle_Mk17_CQC_FG_black"",""CUP_arifle_Mk17_CQC_SFG_black"",""CUP_arifle_Mk17_CQC_EGLM_black"",""CUP_arifle_Mk17_STD_black"",""CUP_arifle_Mk17_STD_FG_black"",""CUP_arifle_Mk17_STD_SFG_black"",""CUP_arifle_Mk17_STD_EGLM_black"",""CUP_arifle_Mk20_black"",""CUP_arifle_Mk16_LeupoldMk4MRT"",""CUP_arifle_Mk16_CQC_FG_Aim_Laser_snds"",""CUP_arifle_Mk16_CQC_EGLM_Holo_Laser_mfsup"",""CUP_arifle_Mk16_CQC_SFG_Holo"",""CUP_arifle_Mk16_STD_SFG_Scope"",""CUP_arifle_Mk16_STD_EGLM_ACOG_Laser"",""CUP_arifle_Mk16_STD_EGLM_Specter"",""CUP_arifle_Mk16_STD_EGLM_ANPAS13c1_Laser_mfsup"",""CUP_arifle_Mk16_STD_FG_Holo_Laser"",""CUP_arifle_Mk16_STD_FG_LeupoldMk4CQT_Laser"",""CUP_arifle_Mk17_CQC_SFG_Aim_mfsup"",""CUP_arifle_Mk17_STD_FG_Aim_Laser_snds"",""CUP_arifle_Mk17_STD_EGL_ElcanSpecter_Laser"",""CUP_arifle_Mk17_STD_FG_ANPAS13c1_Laser_Snds"",""CUP_arifle_Mk20_LeupoldMk4MRT"",""CUP_arifle_Mk20_SB11420_snds"",""CUP_arifle_XM8_Carbine"",""CUP_arifle_XM8_Carbine_FG"",""CUP_arifle_XM8_Carbine_GL"",""CUP_arifle_xm8_sharpshooter"",""CUP_arifle_xm8_SAW"",""CUP_arifle_XM8_Compact"",""CUP_arifle_XM8_Compact_Rail"",""CUP_arifle_XM8_Railed"",""CUP_arifle_XM8_Compact_Holo_Flashlight"",""CUP_arifle_XM8_Railed_ANPAS13c1_Laser"",""CUP_arifle_XM8_Railed_ANPAS13c1_Laser_snds"",""CUP_arifle_XM8_Railed_Holo_Laser_snds"",""rhs_weap_m3a1"",""rhs_weap_m3a1_specops"",""rhs_weap_m1garand_sa43"",""rhs_weap_l1a1"",""rhs_weap_l1a1_suit"",""rhs_weap_l1a1_pvs2"",""rhs_weap_g36c"",""rhs_weap_g36kv"",""rhs_weap_g36kv_ag36"",""rhs_weap_g36c_compm4"",""rhs_weap_g36kv_compm4"",""rhs_weap_g36kv_ag36_eo"",""rhs_weap_hk416d10_compm4"",""rhs_weap_m249"",""rhs_weap_m249_pip_vfg3"",""rhs_weap_m249_pip_L_para_vfg3"",""rhs_weap_m249_pip_L_para_folded_vfg2"",""rhs_weap_m249_pip_L_para_folded_vfg3"",""rhs_weap_m249_light_L"",""rhs_weap_m249_light_S_elcan"",""rhs_weap_m249_light_L_elcan"",""rhs_weap_m249_pip_usmc"",""CUP_lmg_m249_pip1"",""CUP_lmg_m249_pip3"",""CUP_lmg_L110A1"",""CUP_lmg_M249_ElcanM145"",""CUP_lmg_L110A1_Aim_Laser"",""rhs_weap_minimi_para_railed"",""rhs_weap_minimi_para_railed_vfg1"",""rhs_weap_minimi_para_railed_vfg2"",""rhs_weap_minimi_para_railed_vfg3"",""rhs_weap_minimi_para_railed_eot552_m952v_sfmb"",""CUP_srifle_M107_Snow"",""CUP_srifle_M107_LeupoldVX3"",""CUP_srifle_M107_LeupoldMk4"",""CUP_srifle_M107_ANPAS13c2"",""CUP_launch_Javelin"",""CUP_launch_M47"",""CUP_launch_NLAW"",""CUP_launch_FIM92Stinger"",""launch_MRAWS_green_F"",""launch_MRAWS_green_rail_F"",""rhs_weap_panzerfaust60""],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]],[[""rhs_mag_M441_HE"",""rhs_mag_M433_HEDP"",""rhs_mag_M397_HET"",""rhs_mag_m576"",""CUP_1Rnd_HE_M203"",""CUP_1Rnd_HEDP_M203"",""rhs_mag_30Rnd_556x45_M855A1_Stanag"",""rhs_mag_30Rnd_556x45_Mk262_Stanag"",""rhs_mag_30Rnd_556x45_M855A1_PMAG"",""rhs_mag_30Rnd_556x45_Mk262_PMAG"",""CUP_30Rnd_9x19_EVO"",""CUP_30Rnd_9x19_MP5"",""CUP_20Rnd_762x51_B_SCAR_bkl"",""CUP_25Rnd_762x51_Galil_Mag"",""CUP_30Rnd_556x45_XM8"",""CUP_25Rnd_556x45_Famas"",""CUP_30Rnd_762x51_FNFAL_M"",""rhs_mag_20Rnd_762x51_m61_fnfal"",""rhs_mag_20Rnd_762x51_m80a1_fnfal"",""CUP_20Rnd_762x51_DMR"",""CUP_20Rnd_762x51_HK417"",""CUP_20Rnd_762x51_B_M110"",""rhsusf_20Rnd_762x51_m80_Mag"",""rhsusf_20Rnd_762x51_SR25_m993_Mag"",""rhsusf_100Rnd_556x45_mixed_soft_pouch"",""rhsusf_100Rnd_556x45_soft_pouch_coyote"",""rhsusf_100Rnd_762x51"",""rhsusf_100Rnd_762x51_m61_ap"",""rhsusf_100Rnd_762x51_m80a1epr"",""CUP_NLAW_M"",""CUP_Javelin_M"",""CUP_Dragon_EP1_M"",""CUP_MAAWS_HEAT_M"",""CUP_MAAWS_HEDP_M"",""MRAWS_HEAT55_F"",""MRAWS_HE_F"",""MRAWS_HEAT_F"",""CUP_SMAW_HEAA_M"",""CUP_SMAW_HEDP_M"",""CUP_SMAW_NE_M"",""rhs_rpg7_type69_airburst_mag"",""rhs_fim92_mag"",""CUP_HandGrenade_M67"",""rhs_mag_m67"",""rhs_mag_m18_green"",""rhs_mag_m18_red"",""rhs_mag_m18_yellow"",""rhs_mag_m18_purple"",""DemoCharge_Remote_Mag"",""rhsusf_mag_10Rnd_STD_50BMG_M33"",""rhsusf_mag_10Rnd_STD_50BMG_mk211"",""CUP_10Rnd_127x99_M107"",""rhsusf_10Rnd_762x51_m118_special_Mag"",""rhsusf_10Rnd_762x51_m993_Mag"",""rhsusf_10Rnd_762x51_m62_Mag"",""CUP_5Rnd_762x51_M24"",""CUP_5Rnd_762x54_Mosin_M"",""CUP_5Rnd_762x67_G22""],[6,10,12,6,6,6,12,8,12,8,8,8,18,6,12,10,10,4,12,14,18,8,8,4,2,5,5,2,3,3,3,3,4,2,3,2,4,4,4,4,4,4,12,12,3,3,6,3,4,4,4,14,10,3,8,8,4,12]],[[""muzzle_snds_H"",""muzzle_snds_M"",""muzzle_snds_B"",""optic_Aco"",""optic_ACO_grn"",""optic_Holosight"",""optic_Holosight_smg"",""acc_pointer_IR"",""optic_MRCO"",""optic_DMS"",""CUP_bipod_G3"",""CUP_bipod_G3SG1"",""CUP_Mxx_camo"",""muzzle_snds_338_black"",""optic_AMS"",""bipod_01_F_snd"",""bipod_01_F_blk"",""bipod_01_F_mtp"",""muzzle_snds_H_khk_F"",""muzzle_snds_m_khk_F"",""muzzle_snds_58_blk_F"",""muzzle_snds_58_hex_F"",""muzzle_snds_B_khk_F"",""muzzle_snds_65_TI_blk_F"",""muzzle_snds_65_TI_hex_F"",""muzzle_snds_H_MG_blk_F"",""optic_Arco_blk_F"",""optic_ERCO_blk_F"",""optic_Holosight_blk_F"",""optic_Holosight_khk_F"",""optic_Holosight_smg_blk_F"",""optic_Holosight_smg_khk_F"",""bipod_01_F_khk"",""optic_DMS_weathered_F"",""optic_DMS_weathered_Kir_F"",""rhsusf_acc_anpeq15"",""rhsusf_acc_anpeq15_bk"",""rhsusf_acc_anpeq15_light"",""rhsusf_acc_anpeq15_bk_light"",""rhsusf_acc_anpeq15_bk_top"",""rhsusf_acc_anpeq15side"",""rhsusf_acc_anpeq15side_bk"",""rhsusf_acc_m24_silencer_black"",""rhsusf_acc_aac_scarh_silencer"",""CUP_optic_HoloBlack"",""CUP_optic_Eotech553_OD"",""CUP_optic_MicroT1_OD"",""CUP_optic_MicroT1_coyote"",""CUP_optic_MicroT1_low"",""CUP_optic_MicroT1_low_coyote"",""CUP_optic_SUSAT"",""CUP_optic_ACOG"",""CUP_optic_ACOG_TA01B_Black"",""CUP_optic_ACOG_TA01B_RMR_Black"",""CUP_optic_ACOG_TA01B_RMR_Coyote"",""CUP_optic_LeupoldMk4"",""CUP_optic_LeupoldMk4_MRT_tan"",""CUP_optic_Elcan_SpecterDR_KF_RMR_black"",""CUP_optic_Elcan_reflex"",""CUP_acc_ANPEQ_15_Black_Top"",""CUP_acc_ANPEQ_15_Top_Flashlight_Black_L"",""CUP_optic_G33_HWS_BLK"",""CUP_optic_AIMM_MICROT1_BLK"",""CUP_optic_AIMM_MICROT1_TAN"",""CUP_muzzle_mfsup_Suppressor_M107_Snow"",""CUP_bipod_FNFAL"",""CUP_Bipod_G36"",""CUP_optic_G36Optics"",""CUP_optic_G36Optics_3D"",""CUP_optic_G36Optics15x"",""CUP_optic_G36Optics15x_3D"",""CUP_optic_G36Optics_Holo_3D"",""CUP_muzzle_snds_XM8"",""TRYK_balaclava_BLACK_NV"",""TRYK_balaclava_NV""],[1,2,2,1,1,3,3,6,1,2,1,1,2,3,2,1,1,1,1,2,1,1,2,1,1,3,2,3,3,3,3,3,1,1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,2,3,2,2,2,2,1,2,2,1,1,3,1,1,1,2,1,1,1,1,1,1,1,5,2]],[[""B_AssaultPack_sgg"",""B_TacticalPack_mcamo"",""TRYK_B_Carryall_wh"",""TRYK_Winter_pack""],[4,4,6,4]]],false]";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID=10;
+		};
+		class Links
+		{
+			items=10;
+			class Item0
+			{
+				linkID=0;
+				item0=20;
+				item1=22;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item1
+			{
+				linkID=1;
+				item0=19;
+				item1=21;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item2
+			{
+				linkID=2;
+				item0=21;
+				item1=16;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item3
+			{
+				linkID=3;
+				item0=22;
+				item1=18;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item4
+			{
+				linkID=4;
+				item0=27;
+				item1=28;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item5
+			{
+				linkID=5;
+				item0=28;
+				item1=26;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item6
+			{
+				linkID=6;
+				item0=33;
+				item1=31;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item7
+			{
+				linkID=7;
+				item0=35;
+				item1=36;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item8
+			{
+				linkID=8;
+				item0=36;
+				item1=31;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item9
+			{
+				linkID=9;
+				item0=54;
+				item1=53;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+		};
+	};
+};

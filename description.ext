@@ -1,0 +1,101 @@
+/*
+  ЛАЙФХАК:  Если открыть mission.sqm и выполнить поиск по "dataType="Comment"",
+            можно чекать критерии части редактора, не открывая эту миссию в нем
+
+  TYPE: Тип Ко-Оп миссии.
+    Free:       Свободное выполнение миссии. Имеется только конечная цель.
+                Почти всегда должна быть механика S.
+                Пример: [OPII-F] Democracy Support (Wake)
+    Semi-Free:  Имеется ряд задач, некоторые из которых выполняются свободным
+                путем, а некоторые - проедрешенным миссией.
+                Пример: [OP] Armored Theft (Sahrani)
+    Linear:     Миссия состоит (в основном) из задач, выполнение которых
+                предрешено.
+                Пример: [OPII] Heart Attack (Chernobylzone)
+
+  MODULES: Механики, реализованные в ней
+    S:    SECTOR CONTROL
+    C:    Озвучка (охуительная (это обязательно))
+      m:  Многоголосая (ахуеть если такая появится)
+    T:    Респавн в определенных позициях с тикетами.
+          Суть этой механики с точки зрения реализма в том, чтоу вас есть
+          определенное кол-во людских ресурсов.
+      v:  Возрождение техники
+    P:    Гимн папича в конце (лол)
+*/
+
+// TODO markers gude
+
+respawnOnStart = 1;
+allowSubordinatesTakeWeapons = 1;
+weaponPool = true;
+
+// Здесь удаляем механики, которые не нужны.
+class CfgFunctions {
+  class ZONT {
+    class Both {
+      file = "both";
+      /* ОБЩИЕ ТРЕБОВАНИЯ */
+      class init_vars { postInit = 1; };    // Здесь переменные, которые каким-либо образом влияют на сцену (создают юнит и т.п.)
+      class init_vars_pre { preInit = 1; }; // Здесь простейшие переменные
+      class getTriggers {};
+    };
+    class Client {
+      file = "client";
+      /* ОБЩИЕ ТРЕБОВАНИЯ */
+      class debugMarkers { postInit = 1; };
+      /* P - PAPICH */
+      class endMission {}; // Завершить миссию эффектно
+    };
+    class Server {
+      file = "server";
+      /* T - Respawn w\ tickets */
+      class init_respawn { postInit = 1; };
+      class onRespawn {};
+      /* S - SECTOR CONTROL */
+      class init_sectors { postInit = 1; };
+      class onSectorChanged {};
+    };
+  };
+};
+
+/* C - CAST */
+class CfgRadio {
+  sounds[] = {};
+
+	class tsk1_1 {
+		name = "";
+  sound[] = { "cast\tsk1_1.ogg", 1, 1.0 /*<- pitch*/ };
+		title = "Итак, Приступ, вы вошли в пространство чернобыльской зоны. Отныне мы храним радиомолчание. Постарайтесь побыстрее занять позицию около отеля. Мы можем вам присылать информацию со спутника, но не часто, т.к. это не так просто делать. Черный - конец связи.";
+	};
+};
+
+class CfgDebriefing {
+  class loser1 {
+    title = "Пиздец";
+		subtitle = "Совсем ебанутые?";
+		description = "Вы долбоебы. Сожалеем.";
+		pictureBackground = "";
+		picture = "pic\monk.paa";
+  };
+};
+
+class CfgDebriefingSections
+{
+	class Wtf
+	{
+		title = "Что это ебать";
+		variable = "OPV_kek";
+	};
+};
+
+class CfgSounds {
+    sounds[] = {};
+    /* P - PAPICH */
+    class papich { // Жедательно иметь это в конце)
+        name = "";
+        sound[] = {"snd\arthas.ogg",10,1,100};
+        titles[] = {};
+        forceTitles = true;
+    };
+};
